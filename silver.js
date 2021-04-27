@@ -327,10 +327,11 @@ ctx.closePath();
     };
     var sphereSize = 100;
     var j = 0;
-	var draw = function(){
-	
-	};
-	 permitAnimations();
+    var draw = function(){
+       
+    };
+    permitAnimations();
+}
 else if (MODE === "js/dom"){
     var selector = function(slc){
         return document.querySelector(slc);
