@@ -327,3 +327,18 @@ ctx.closePath();
     };
     var sphereSize = 100;
     var j = 0;
+else if (MODE === "js/dom"){
+    var selector = function(slc){
+        return document.querySelector(slc);
+    };
+    var create = function(element){
+          return document.createElement(element);
+    };
+    var append = function(variable,where){
+        where.appendChild(variable);
+    };
+    var je = create("h1");
+    je.style.textAlign = "center";
+    je.innerHTML = "You can also use Silver.js with the DOM!";
+    append(je,document.body);
+}
