@@ -327,6 +327,7 @@ ctx.closePath();
     };
     var sphereSize = 100;
     var j = 0;
+	 permitAnimations();
 else if (MODE === "js/dom"){
     var selector = function(slc){
         return document.querySelector(slc);
