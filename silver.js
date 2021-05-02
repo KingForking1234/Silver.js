@@ -34,6 +34,7 @@ makeCanvas(innerWidth,innerHeight);
         canvas.addEventListener("mousemove",function(e){
             mouseX = e.clientX - canvas.getBoundingClientRect().x;
             mouseY = e.clientY - canvas.getBoundingClientRect().y;
+            
         });
     };
     addMouseXY();
@@ -327,10 +328,6 @@ ctx.closePath();
     };
     var sphereSize = 100;
     var j = 0;
-    var draw = function(){
-       
-    };
-    permitAnimations();
 }
 else if (MODE === "js/dom"){
     var selector = function(slc){
