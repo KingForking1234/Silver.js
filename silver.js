@@ -171,6 +171,23 @@ ctx.closePath();
         ctx.stroke();
         ctx.fill();
         };
+	var cVertex = function(cx1, cy1, x, y) {
+        ctx.beginPath();
+        ctx.moveTo(cx1, y);
+        ctx.quadraticCurveTo(cx1, cy1, x, y,0.1 * Math.PI );
+        ctx.stroke();
+        ctx.closePath();
+	};
+	var bVertex = function(cx1, cy1, cx2, cy2, x, y) {
+         ctx.beginPath();
+         ctx.bezierCurveTo(cx1,cy1,cx2,cy2,x,y,0.1 * Math.PI);
+        ctx.stroke();
+        ctx.closePath();
+	};
+
+
+
+
         //Make a polygon function
         var polygon = function(xpos,ypos){
             ctx.beginPath();
