@@ -34,7 +34,8 @@ makeCanvas(innerWidth,innerHeight);
         canvas.addEventListener("mousemove",function(e){
             mouseX = e.clientX - canvas.getBoundingClientRect().x;
             mouseY = e.clientY - canvas.getBoundingClientRect().y;
-            
+            window.requestAnimationFrame(mouseX);
+            window.requestAnimationFrame(mouseY);
         });
     };
     addMouseXY();
@@ -297,7 +298,7 @@ ctx.closePath();
     var sound = function(src){
         var newSound = document.createElement("audio");
         newSound.src = src;
-        newSound.style.display = "none";
+        newSound.style.visibility = "hidden";
         document.body.appendChild(newSound);
         newSound.play();
     };
@@ -319,15 +320,23 @@ ctx.closePath();
     var gradient = function(x,y,x2,y2,colors){
         
         
-            var linearGrad = ctx.createLinearGradient(x,y,x2,y2);
+        var linearGrad = ctx.createLinearGradient(x,y,x2,y2);
         linearGrad.addColorStop(0,colors[0]);
         linearGrad.addColorStop(0.5,colors[1]);
         linearGrad.addColorStop(1,colors[2]);
         ctx.fillStyle = linearGrad;
         ctx.strokeStyle = linearGrad;
     };
+    var sin = function(num){
+        return Math.sin(num);
+    };
+    var cos = function(num){
+        return Math.cos(num);
+    };
     var sphereSize = 100;
     var j = 0;
+    var draw = function(){};
+    permitAnimations();
 }
 else if (MODE === "js/dom"){
     var selector = function(slc){
