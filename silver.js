@@ -77,6 +77,15 @@ makeCanvas(innerWidth,innerHeight);
         ctx.fill();
         ctx.closePath();
     };
+	var point = function(x, y){
+        ctx.beginPath();
+        ctx.arc(x, y, 0.01, 0, 1*Math.PI);
+        ctx.stroke();
+        ctx.fill();
+        ctx.restore();
+
+};
+
     //Make a cube
     //Make a sphere
     var sphere = function(x,y,w,h,c1,c2,c3){
