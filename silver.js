@@ -85,7 +85,7 @@ makeCanvas(innerWidth,innerHeight);
         ctx.restore();
 
 };
-	var star = function(cx,cy,spikes,outerRadius,innerRadius){
+	var polygon = function(cx,cy,spikes,outerRadius,innerRadius){
 var rot=Math.PI/2*3;
 var x=cx;
 var y=cy;
@@ -109,7 +109,6 @@ ctx.closePath();
 ctx.stroke();
 ctx.fill();
 }
-
     //Make a cube
     //Make a sphere
     var sphere = function(x,y,w,h,c1,c2,c3){
@@ -222,7 +221,7 @@ ctx.closePath();
 
 
         //Make a polygon function
-        var polygon = function(xpos,ypos){
+        var conLin = function(xpos,ypos){
             ctx.beginPath();
             ctx.moveTo(xpos[plx-1],ypos[plx-1]);
             for (var plx = 1;plx < xpos.length&&plx < ypos.length;plx++){
