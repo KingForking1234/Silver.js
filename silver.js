@@ -309,7 +309,7 @@ ctx.closePath();
         ctx.drawImage(theImg,x,y,width,height);
         ctx.closePath();
     };
-    var distance = function(){
+    var dist = function(){
         var distx = arguments[0] - arguments[2];
             var disty = arguments[1] - arguments[3];
             return Math.sqrt(distx * distx + disty * disty);
@@ -333,13 +333,9 @@ ctx.closePath();
     var cos = function(num){
         return Math.cos(num);
     };
-    
     var tan = function(deg){
-       return Math.tan(deg);
-    };
-    var dist = function(x1, y1, x2, y2){
-       return Math.dist(x1, y1, x2, y2);
-    };
+        return Math.tan(deg);
+};
     var sphereSize = 100;
     var j = 0;
     var draw = function(){};
