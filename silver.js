@@ -320,7 +320,7 @@ ctx.closePath();
     var gradient = function(x,y,x2,y2,colors){
         
         
-        var linearGrad = ctx.createLinearGradient(x,y,x2,y2);
+            var linearGrad = ctx.createLinearGradient(x,y,x2,y2);
         linearGrad.addColorStop(0,colors[0]);
         linearGrad.addColorStop(0.5,colors[1]);
         linearGrad.addColorStop(1,colors[2]);
@@ -332,6 +332,13 @@ ctx.closePath();
     };
     var cos = function(num){
         return Math.cos(num);
+    };
+    
+    var tan = function(deg){
+       return Math.tan(deg);
+    };
+    var dist = function(x1, y1, x2, y2){
+       return Math.dist(x1, y1, x2, y2);
     };
     var sphereSize = 100;
     var j = 0;
