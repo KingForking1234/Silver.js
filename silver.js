@@ -85,6 +85,21 @@ makeCanvas(innerWidth,innerHeight);
         ctx.restore();
 
 };
+	var star = function(x, y){
+            var points = [ [ 0, 85 ], [ 75, 75 ], [ 100, 10 ], [ 125, 75 ], 
+            [ 200, 85 ], [ 150, 125 ], [ 160, 190 ], [ 100, 150 ], 
+            [ 40, 190 ], [ 50, 125 ], [ 0, 85 ] ];
+        
+        var len = points.length;
+
+        ctx.beginPath();
+        ctx.moveTo(x, y);
+        
+        for (var i = 0; i < len; i++) {
+            ctx.lineTo(points[i][0]+x, points[i][1]+y);
+        }  
+        ctx.fill(); 
+};
 
     //Make a cube
     //Make a sphere
