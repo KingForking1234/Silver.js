@@ -85,21 +85,30 @@ makeCanvas(innerWidth,innerHeight);
         ctx.restore();
 
 };
-	var star = function(x, y){
-            var points = [ [ 0, 85 ], [ 75, 75 ], [ 100, 10 ], [ 125, 75 ], 
-            [ 200, 85 ], [ 150, 125 ], [ 160, 190 ], [ 100, 150 ], 
-            [ 40, 190 ], [ 50, 125 ], [ 0, 85 ] ];
-        
-        var len = points.length;
+	var star = function(cx,cy,spikes,outerRadius,innerRadius){
+var rot=Math.PI/2*3;
+var x=cx;
+var y=cy;
+var step=Math.PI/spikes;
 
-        ctx.beginPath();
-        ctx.moveTo(x, y);
-        
-        for (var i = 0; i < len; i++) {
-            ctx.lineTo(points[i][0]+x, points[i][1]+y);
-        }  
-        ctx.fill(); 
-};
+ctx.beginPath();
+ctx.moveTo(cx,cy-outerRadius)
+for(i=0;i<spikes;i++){
+x=cx+Math.cos(rot)*outerRadius;
+y=cy+Math.sin(rot)*outerRadius;
+ctx.lineTo(x,y)
+rot+=step
+
+x=cx+Math.cos(rot)*innerRadius;
+y=cy+Math.sin(rot)*innerRadius;
+ctx.lineTo(x,y)
+rot+=step
+}
+ctx.lineTo(cx,cy-outerRadius);
+ctx.closePath();
+ctx.stroke();
+ctx.fill();
+}
 
     //Make a cube
     //Make a sphere
