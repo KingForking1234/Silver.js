@@ -1,4 +1,4 @@
-var MODE = "draw";
+ var MODE = "draw";
 if (MODE === "draw"){
 var makeCanvas = function(w,h){
     var createCanvas = document.createElement("canvas");
@@ -34,8 +34,6 @@ makeCanvas(innerWidth,innerHeight);
         canvas.addEventListener("mousemove",function(e){
             mouseX = e.clientX - canvas.getBoundingClientRect().x;
             mouseY = e.clientY - canvas.getBoundingClientRect().y;
-            window.requestAnimationFrame(mouseX);
-            window.requestAnimationFrame(mouseY);
         });
     };
     addMouseXY();
@@ -385,7 +383,7 @@ ctx.closePath();
     var tan = function(deg){
         return Math.tan(deg);
 };
-    var sphereSize = 100;
+ var sphereSize = 100;
     var j = 0;
     var draw = function(){};
     permitAnimations();
