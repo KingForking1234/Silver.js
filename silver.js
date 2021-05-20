@@ -218,16 +218,21 @@ ctx.closePath();
 
 
 
-        //Make a polygon function
         var conLin = function(xpos,ypos){
             ctx.beginPath();
-            ctx.moveTo(xpos[plx-1],ypos[plx-1]);
+            ctx.moveTo(xpos[0],ypos[0]);
             for (var plx = 1;plx < xpos.length&&plx < ypos.length;plx++){
                 
                 
                     
                     ctx.lineTo(xpos[plx],ypos[plx]);
             } 
+            ctx.closePath();
+            
+                   ctx.stroke();
+                   ctx.fill();
+                    
+        };
             ctx.closePath();
             
                    ctx.stroke();
