@@ -1,4 +1,4 @@
- var MODE = "draw";
+       var MODE = "draw";
 if (MODE === "draw"){
 var makeCanvas = function(w,h){
     var createCanvas = document.createElement("canvas");
@@ -218,6 +218,7 @@ ctx.closePath();
 
 
 
+        //Make a polygon function
         var conLin = function(xpos,ypos){
             ctx.beginPath();
             ctx.moveTo(xpos[0],ypos[0]);
@@ -227,12 +228,6 @@ ctx.closePath();
                     
                     ctx.lineTo(xpos[plx],ypos[plx]);
             } 
-            ctx.closePath();
-            
-                   ctx.stroke();
-                   ctx.fill();
-                    
-        };
             ctx.closePath();
             
                    ctx.stroke();
